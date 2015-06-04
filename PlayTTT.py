@@ -1,4 +1,4 @@
-from TTTAI import AI1, AI2
+from TTTAI import AI_X, AI_O
 
 # Command line Tic Tac Toe 
 board = [[" "," "," "],[" "," "," "],[" "," "," "]]
@@ -37,13 +37,13 @@ def mode2(): # Player vs AI
 	if choice == "2":
 		player_num = 2
 		com_num = 1
-		com = AI1()
+		com = AI_X()
 		move = com.move(board)
 		make_move(move, com_num)
 	else:
 		player_num = 1
 		com_num = 2
-		com = AI2()
+		com = AI_O()
 
 
 	while not game_over():
@@ -91,7 +91,6 @@ def print_game():
 
 
 def make_move(place, player):
-	print(available_spaces, place)
 	available_spaces.remove(place)
 	place = int(place) - 1
 	
